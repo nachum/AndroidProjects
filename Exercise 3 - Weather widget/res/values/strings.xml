@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WeatherWidget</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="action_settings">Settings</string>
+    <string name="autoReresh">Auto reresh</string>
+    <string name="start">Start service</string>
+    <string name="stop">Stop service</string>
+    <string name="selectCity">Select city</string>
+    <string name="refresh">Select time</string>
+    <string name="city">Select city</string>
+ 	<string name="empty"></string>
+ 	<string name="zero">0.0</string>
+ 	
+    <string-array name="time_arrays">
+        <item>Every 30 seconds</item>
+        <item>Every 1 minute</item>
+        <item>Every 30 minutes</item>
+        <item>Every 1 hour</item>
+        <item>Every 6 hours</item>
+        <item>Every 12 hours</item>
+        <item>Every 24 hours</item>
+    </string-array>
+    <string-array name="city_arrays">
+        <item>Jerusalem,IL</item>
+        <item>Beersheba,IL</item>
+        <item>Zefat,IL</item>
+        <item>Tel Aviv,IL</item>
+        <item>London,UK</item>
+        <item>Milano,IT</item>
+    </string-array>
+    <string name="explain">To change Settings you must stop service and start again</string>
+    <string name="min">Min:</string>
+    <string name="max">Max:</string>
+
+</resources>
