@@ -1,0 +1,184 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textViewHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/lab"
+        android:textSize="20sp"
+        android:textColor="#30453f" />
+
+    <TextView
+        android:id="@+id/textViewAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewHead"
+        android:layout_marginTop="34dp"
+        android:text="@string/Add_grades" />
+
+    <TextView
+        android:id="@+id/textViewSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewAdd"
+        android:layout_below="@+id/buttonAdd"
+        android:layout_marginTop="27dp"
+        android:text="@string/sub_grades" />
+
+    <TextView
+        android:id="@+id/textViewID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewSub"
+        android:layout_below="@+id/textViewSub"
+        android:layout_marginTop="15dp"
+        android:text="@string/ID" />
+
+    <EditText
+        android:id="@+id/editTextID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewID"
+        android:layout_alignBottom="@+id/textViewID"
+        android:layout_marginLeft="14dp"
+        android:layout_toRightOf="@+id/textViewID"
+        android:ems="7"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextEX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewID"
+        android:layout_toRightOf="@+id/textViewEX"
+        android:ems="3"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textViewEX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editTextEX"
+        android:layout_alignLeft="@+id/textViewID"
+        android:text="@string/EX_NUM" />
+
+    <Button
+        android:id="@+id/buttonSub"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_marginTop="6dp"
+        android:layout_below="@+id/editTextID"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/editTextEX"
+        android:text="@string/get_sub"
+        android:textSize="13sp"
+        android:onClick="clicked_getSub" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignBaseline="@+id/textViewAdd"
+        android:layout_alignBottom="@+id/textViewAdd"
+        android:layout_alignLeft="@+id/buttonSub"
+        android:text="@string/add"
+        android:textSize="15sp"
+        android:onClick="clicked_add" />
+
+    <TextView
+        android:id="@+id/textViewAllG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewEX"
+        android:layout_below="@+id/buttonSub"
+        android:layout_marginTop="30dp"
+        android:text="@string/all_grades_id" />
+
+    <EditText
+        android:id="@+id/editTextGetAllID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewAllID"
+        android:layout_alignLeft="@+id/editTextID"
+        android:ems="7"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textViewAllID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewAllG"
+        android:layout_marginTop="14dp"
+        android:layout_toLeftOf="@+id/editTextID"
+        android:text="@string/ID" />
+
+    <Button
+        android:id="@+id/buttonAllID"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:layout_alignBottom="@+id/editTextGetAllID"
+        android:layout_toRightOf="@+id/textViewHead"
+        android:text="@string/get"
+        android:textSize="13sp"
+        android:onClick="getById"  />
+
+    <TextView
+        android:id="@+id/textViewAllAVG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewAllID"
+        android:layout_below="@+id/editTextGetAllID"
+        android:layout_marginTop="22dp"
+        android:text="@string/all_avg" />
+
+    <Button
+        android:id="@+id/buttonALLAVG"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/textViewAllAVG"
+        android:layout_marginTop="18dp"
+        android:layout_toLeftOf="@+id/buttonSub"
+        android:text="@string/all_avg_b"
+        android:textSize="12sp"
+        android:onClick="allExGrades" />
+
+    <TextView
+        android:id="@+id/textViewhere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonALLAVG"
+        android:layout_alignBottom="@+id/buttonALLAVG"
+        android:layout_alignLeft="@+id/textViewAllAVG"
+        android:text="@string/here" />
+
+    <TextView
+        android:id="@+id/textViewDB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonDB"
+        android:layout_alignBottom="@+id/buttonDB"
+        android:layout_alignLeft="@+id/textViewhere"
+        android:text="@string/down_db" />
+
+    <Button
+        android:id="@+id/buttonDB"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignLeft="@+id/buttonSub"
+        android:layout_below="@+id/buttonALLAVG"
+        android:text="@string/download"
+        android:textSize="12sp"
+        android:onClick="downloadDb" />
+
+</RelativeLayout>
